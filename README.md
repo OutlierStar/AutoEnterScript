@@ -1,3 +1,11 @@
+自动输入脚本v1.0
+该脚本实现读取本机上的文件内容并自动输入
+------------------------------------------------------------------------------------------
+双击release.exe运行后，脚本自动运行;
+Ctrl+Z选择要自动输入的文件；Ctrl+X结束脚本运行；
+脚本运行期间Ctrl+Z和Ctrl+X只会被脚本接收;
+
+
 Auto-enter script v1.0
 The script implements the ability to read the contents of the file on the native machine and enter it automatically
 ------------------------------------------------------------------------------------------
