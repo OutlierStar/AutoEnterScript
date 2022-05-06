@@ -1,3 +1,4 @@
+已更新至v1.2版本，请在release中下载最新版
 自动输入脚本v1.0
 该脚本实现读取本机上的文件内容并自动输入
 https://codeload.github.com/OutlierStar/AutoEnterScript/zip/refs/heads/main
