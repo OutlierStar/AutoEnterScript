@@ -13,7 +13,6 @@ Gui, Add, Checkbox, vMyCheckbox3, 自动退格
 Gui, Add, Button, w50 h20 y23 default , OK
 GuiControl, Text, EcodingChoice, ASCII
 
-
 if file =  
     Gui, Destroy
 else
@@ -39,19 +38,20 @@ FileEncoding, %EcodingChoice%
 
 FileRead, text, %file%
 SwitchIME(0x04090409)
+SetKeyDelay, 80
 if MyCheckbox1 = 1
     StringReplace, text, text, `t, , All
 if MyCheckbox2 = 1
-    StringReplace, text, text, `n, , All
+    StringReplace, text, text, `r, , All
 if MyCheckbox3 = 1
 {
     StringReplace, text, text, {, lhkh, All
     StringReplace, text, text, }, rhkh, All
+    
     StringReplace, text, text, #, {#}, All
     StringReplace, text, text, !, {!}, All
     StringReplace, text, text, ^, {^}, All
     StringReplace, text, text, +, {+}, All
-    StringReplace, text, text, &, {&}, All
     StringReplace, text, text, <, {<}, All
     StringReplace, text, text, >, {>}, All
     StringReplace, text, text, *, {*}, All
@@ -59,11 +59,11 @@ if MyCheckbox3 = 1
     StringReplace, text, text, &, {&}, All
     StringReplace, text, text, lhkh, {{}, All
     StringReplace, text, text, rhkh,  {bs}{}}, All
-    Send,%text%
+    
+    SendCode(text)
 }
 else
-    SendRaw,%text%
-
+    SendCode(text)
 return
 
 SwitchIME(dwLayout){
@@ -71,3 +71,24 @@ SwitchIME(dwLayout){
     ControlGetFocus,ctl,A
     SendMessage,0x50,0,HKL,%ctl%,A
 }
+
+SendCode(text){
+
+Loop, parse, text, `r`n,
+{
+    
+    DeleteThisLine()
+    SendRaw,%A_LoopField%
+    
+}
+
+}
+
+DeleteThisLine(){
+    Send {Enter}
+    Sleep, 1000
+    Send {Tab}
+    Send +{Home}{Backspace}
+    Sleep, 100
+}
+
