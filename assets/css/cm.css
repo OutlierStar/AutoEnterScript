@@ -1,0 +1,221 @@
+.panel-settings {
+    left: 0;
+    top: 0;
+    box-shadow: var(--el-box-shadow);
+    transform: translateX(-100%);
+    z-index: 99;
+}
+
+.panel-settings::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+    border-top-right-radius: var(--el-border-radius);
+    border-bottom-right-radius: var(--el-border-radius);
+    z-index: 1;
+}
+
+.panel-settings .tabs-nav {
+    font-size: 1rem;
+}
+
+.panel-settings .panel-settings-heading {
+    margin-bottom: 1.5rem;
+}
+
+.panel-settings .side-scroll {
+    position: relative;
+    z-index: 2;
+    padding: 1.5rem;
+}
+
+.panel-settings .form-field-ps-row {
+    display: flex;
+    align-items: center;
+}
+
+.panel-settings .form-field-ps-row label {
+    margin-left: 1rem;
+}
+
+.panel-settings .form-field {
+    margin-bottom: 1rem;
+}
+
+.panel-settings .form-field label {
+    font-size: 0.875rem;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.panel-settings .form-field label small {
+    display: block;
+    margin-top: 0.25rem;
+}
+
+.panel-settings .form-field input {
+    height: 30px;
+}
+
+.panel-settings .form-field.form-field-min-margin {
+    margin-bottom: 0.5rem;
+}
+
+.panel-settings.open {
+    transform: none;
+    z-index: 9999;
+}
+
+.panel-settings.open + .psnav .psnavi-btn .material-icons:nth-child(1) {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3);
+}
+
+.panel-settings.open + .psnav .psnavi-btn .material-icons:nth-child(2) {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.form-field-ps-wide .minicolors-theme-default.minicolors {
+    display: block;
+    width: 100%;
+}
+
+.form-field-ps-wide .minicolors-theme-default.minicolors input {
+    width: 100%;
+}
+
+.minicolors-theme-default.minicolors-position-right .minicolors-input {
+    padding-left: 6px;
+}
+
+.form-field-ps-slider {
+    position: relative;
+}
+
+.psnav {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.5rem;
+    z-index: 14;
+}
+
+.psnav-item {
+    display: block;
+    font-family: var(--heading-font-family);
+    padding: 0.625rem 0.5rem;
+    font-size: 0.75rem;
+    color: var(--text-primary);
+    background-color: var(--background-color);
+    box-shadow: var(--el-box-shadow);
+    border-radius: calc(var(--el-border-radius) * 0.6);
+    margin-bottom: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.psnav-item:last-child {
+    margin-bottom: 0;
+}
+
+.psnav-item:hover {
+    color: var(--text-primary);
+}
+
+.psnav-item:hover .hover-link span {
+    transform: translateY(100%);
+}
+
+.psnav-item:hover .hover-link::after {
+    transform: translateY(0);
+}
+
+.psnav-item .hover-link::after {
+    color: var(--text-primary);
+}
+
+.psnav-item .hover-link span {
+    line-height: 1.5;
+}
+
+.psnavi-btn {
+    position: relative;
+    font-size: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 auto;
+    margin-bottom: 0.25rem;
+}
+
+.psnavi-btn .material-icons {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s;
+}
+
+.psnavi-btn .material-icons:nth-child(1) {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.psnavi-btn .material-icons:nth-child(2) {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3);
+}
+
+.contact-question {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    min-width: 21.5rem;
+    background-color: var(--background-color);
+    box-shadow: var(--el-box-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: var(--el-border-radius);
+    border-top-right-radius: var(--el-border-radius);
+    line-height: 1;
+    z-index: 11;
+}
+
+.contact-question .btn-link {
+    margin-left: 0.75rem;
+    font-size: 0.875rem;
+}
+
+.contact-question .cq-email {
+    margin: 0 0.75rem 0 0.25rem;
+}
+
+@media only screen and (max-width: 767.98px), only screen and (min-width: 567px) and (max-width: 900px) and (orientation: landscape) {
+    .panel-settings .side-scroll {
+        padding: 1.5rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .panel-settings {
+        width: 290px;
+    }
+
+    .panel-settings .side-scroll {
+        padding: 1.5rem 1rem;
+    }
+}
