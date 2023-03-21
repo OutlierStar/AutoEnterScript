@@ -1,6 +1,7 @@
 已更新至v1.2版本，请在release中下载最新版
 
 博客地址：http://t.csdn.cn/cwea0
+
 软件主页：http://autoenter.wendxing.club/
 
 自动输入脚本v1.0
