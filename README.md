@@ -2,7 +2,6 @@
 
 博客地址：http://t.csdn.cn/cwea0
 
-软件主页：http://autoenter.wendxing.club/
 
 自动输入脚本v1.3
 该脚本实现读取本机上的文件内容并自动输入
