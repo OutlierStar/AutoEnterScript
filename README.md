@@ -1,4 +1,5 @@
 基于AutoHotKey v1的版本已更新至v1.4，请在release中下载最新版
+
 基于AutoHotKey v2重构的版本已发行新版v2.0，请在release中下载最新版
 
 博客地址：http://t.csdn.cn/cwea0
